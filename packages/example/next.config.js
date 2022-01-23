@@ -1,4 +1,4 @@
-const withMinifyClassnames = require('../lib')({
+const withMinifyClassnames = require('nextjs-plugin-minify-css-classname')({
   enable: true,
 });
 

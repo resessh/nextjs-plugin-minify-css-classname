@@ -1,0 +1,25 @@
+{
+  "name": "nextjs-plugin-minify-css-classname",
+  "version": "0.0.1",
+  "description": "A Next.js plugin to minify css classnames.",
+  "author": "resessh <info@resessh.net>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/resessh/nextjs-plugin-minify-css-classname.git"
+  },
+  "bugs": {
+    "url": "https://github.com/resessh/nextjs-plugin-minify-css-classname/issues"
+  },
+  "homepage": "https://github.com/resessh/nextjs-plugin-minify-css-classname#readme",
+  "keywords": [
+    "Next.js",
+    "CSS",
+    "minify",
+    "classname"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rm -rf lib && webpack"
+  }
+}
