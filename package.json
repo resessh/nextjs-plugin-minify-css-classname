@@ -1,29 +1,16 @@
 {
-  "name": "nextjs-plugin-minify-css-classname",
-  "version": "0.0.1",
-  "description": "A Next.js plugin to minify css classnames.",
-  "author": "resessh <info@resessh.net>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/resessh/nextjs-plugin-minify-css-classname.git"
-  },
-  "bugs": {
-    "url": "https://github.com/resessh/nextjs-plugin-minify-css-classname/issues"
-  },
-  "homepage": "https://github.com/resessh/nextjs-plugin-minify-css-classname#readme",
-  "keywords": [
-    "Next.js",
-    "CSS",
-    "minify",
-    "classname"
+  "private": true,
+  "name": "nextjs-plugin-minify-css-classname-project",
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/nextjs-plugin-minify-css-classname",
+    "packages/example"
   ],
-  "main": "lib/index.js",
   "scripts": {
-    "build": "rm -rf lib && webpack",
-    "prettier": "prettier --write ./**/*.ts",
+    "build": "npm run build --workspaces",
     "test:unit": "jest --coverage",
     "test:e2e": "cypress run --record --key fbbf1c92-b915-4252-8a08-656faab6f67d",
+    "example": "npm run build && npm run start -w example",
     "cy": "cypress",
     "commit": "cz"
   },
@@ -34,11 +21,13 @@
     "commitizen": "^4.2.4",
     "cypress": "^9.3.1",
     "jest": "^27.4.7",
-    "next": "^12.0.8",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "next": "^12.0.8"
   },
   "config": {
     "commitizen": {
