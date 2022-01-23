@@ -23,6 +23,8 @@
     "build": "rm -rf lib && webpack",
     "prettier": "prettier --write ./**/*.ts",
     "test:unit": "jest --coverage",
+    "test:e2e": "cypress run --record --key fbbf1c92-b915-4252-8a08-656faab6f67d",
+    "cy": "cypress",
     "commit": "cz"
   },
   "devDependencies": {
@@ -30,6 +32,7 @@
     "@swc/jest": "^0.2.17",
     "@types/jest": "^27.4.0",
     "commitizen": "^4.2.4",
+    "cypress": "^9.3.1",
     "jest": "^27.4.7",
     "next": "^12.0.8",
     "ts-loader": "^9.2.6",
