@@ -5,5 +5,5 @@ const withMinifyClassnames = require('nextjs-plugin-minify-css-classname')({
 module.exports = withMinifyClassnames({
   cssModules: true,
   reactStrictMode: true,
-  pageExtensions: ['page.jsx'],
+  pageExtensions: ['page.tsx'],
 });
