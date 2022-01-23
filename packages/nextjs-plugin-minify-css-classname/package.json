@@ -19,6 +19,7 @@
     "classname"
   ],
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "rm -rf lib && webpack"
   }

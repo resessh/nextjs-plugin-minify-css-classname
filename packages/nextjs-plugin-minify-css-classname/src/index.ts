@@ -57,4 +57,4 @@ const withMinifyClassnames =
     },
   });
 
-module.exports = withMinifyClassnames;
+export default withMinifyClassnames;
