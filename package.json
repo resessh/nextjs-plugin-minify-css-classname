@@ -22,7 +22,7 @@
   "scripts": {
     "build": "rm -rf lib && webpack",
     "prettier": "prettier --write ./**/*.ts",
-    "test": "jest --coverage",
+    "test:unit": "jest --coverage",
     "commit": "cz"
   },
   "devDependencies": {
