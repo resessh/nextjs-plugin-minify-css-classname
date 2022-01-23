@@ -12,6 +12,7 @@
     "test:e2e": "cypress run --record --key fbbf1c92-b915-4252-8a08-656faab6f67d",
     "example": "npm run build && npm run start -w example",
     "cy": "cypress",
+    "release": "shipjs prepare",
     "commit": "cz"
   },
   "devDependencies": {
@@ -21,6 +22,7 @@
     "commitizen": "^4.2.4",
     "cypress": "^9.3.1",
     "jest": "^27.4.7",
+    "shipjs": "^0.24.1",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.67.0",
