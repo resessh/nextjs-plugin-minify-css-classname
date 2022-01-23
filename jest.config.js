@@ -5,5 +5,7 @@ module.exports = {
   testEnvironment: 'node',
   testPathIgnorePatterns: ['<rootDir>/cypress'],
   collectCoverage: true,
-  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
+  collectCoverageFrom: [
+    '<rootDir>/packages/nextjs-plugin-minify-css-classname/src/**/*.ts',
+  ],
 };
