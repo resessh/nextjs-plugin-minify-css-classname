@@ -1,8 +1,9 @@
 # nextjs-plugin-minify-css-classname
-<!-- <a href="https://www.npmjs.com/package/nextjs-plugin-minify-css-classname"><img src="https://img.shields.io/npm/v/nextjs-plugin-minify-css-classname.svg" alt="version"></a> -->
-<!-- <img src="https://github.com/resessh/nextjs-plugin-minify-css-classname/workflows/Build/badge.svg" alt="Build" /> -->
-<!-- <img src="https://github.com/resessh/nextjs-plugin-minify-css-classname/workflows/Test/badge.svg" alt="Test" /> -->
-<!-- <a href="https://codecov.io/gh/resessh/nextjs-plugin-minify-css-classname"><img src="https://codecov.io/gh/resessh/nextjs-plugin-minify-css-classname/branch/master/graph/badge.svg" alt="codecov" /></a> -->
+<a href="https://www.npmjs.com/package/nextjs-plugin-minify-css-classname"><img src="https://img.shields.io/npm/v/nextjs-plugin-minify-css-classname.svg" alt="version"></a>
+<a href="https://github.com/algolia/shipjs/blob/master/LICENSE"><img alt="NPM" src="https://img.shields.io/npm/l/shipjs"></a>
+<img src="https://github.com/resessh/nextjs-plugin-minify-css-classname/workflows/Build/badge.svg" alt="Build" />
+<img src="https://github.com/resessh/nextjs-plugin-minify-css-classname/workflows/Test/badge.svg" alt="Test" />
+<a href="https://codecov.io/gh/resessh/nextjs-plugin-minify-css-classname"><img src="https://codecov.io/gh/resessh/nextjs-plugin-minify-css-classname/branch/master/graph/badge.svg" alt="codecov" /></a>
 <a href="https://www.typescriptlang.org/docs/home.html"><img src="https://camo.githubusercontent.com/832d01092b0e822178475741271b049a2e27df13/68747470733a2f2f62616467656e2e6e65742f62616467652f2d2f547970655363726970742f626c75653f69636f6e3d74797065736372697074266c6162656c" alt="typescript" /></a>
 
 A Next.js plugin to minify css classnames. No any external dependencies.
