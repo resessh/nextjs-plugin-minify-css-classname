@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "nextjs-plugin-minify-css-classname-project",
-  "version": "0.2.0",
+  "version": "0.0.3",
   "workspaces": [
     "packages/nextjs-plugin-minify-css-classname",
     "packages/example"
