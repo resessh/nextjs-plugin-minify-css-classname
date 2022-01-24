@@ -16,11 +16,15 @@ const getMinifiedLocalIdent = (
   return localIdentGenerator.get(`${relativePath}-${exportName}`);
 };
 
-const generateUpdateNextConfig =
-  (enabled?: boolean) =>
-  (
-    originalNextConfig: NextConfig
-  ): NextConfig & { webpack: NonNullable<NextConfig['webpack']> } => ({
+export type Config = {
+  enabled?: boolean;
+};
+export type DecoratedNextConfig = NextConfig & {
+  webpack: NonNullable<NextConfig['webpack']>;
+};
+const withMinifyClassnames =
+  (pluginConfig?: Config) =>
+  (originalNextConfig: NextConfig): DecoratedNextConfig => ({
     ...originalNextConfig,
     webpack(config, context) {
       const webpackResult =
@@ -28,7 +32,10 @@ const generateUpdateNextConfig =
           ? originalNextConfig.webpack(config, context)
           : config;
 
-      if (enabled === false || (enabled === undefined && !context.dev)) {
+      if (
+        pluginConfig?.enabled === false ||
+        (pluginConfig?.enabled === undefined && context.dev)
+      ) {
         return webpackResult;
       }
 
@@ -40,7 +47,7 @@ const generateUpdateNextConfig =
               Array.isArray(oneOfRule.use)
             ) {
               for (const loader of oneOfRule.use) {
-                if (/\/css-loader\//.test(loader.loader)) {
+                if (/css-loader/.test(loader.loader)) {
                   if (!!loader.options.modules) {
                     loader.options.modules.getLocalIdent =
                       getMinifiedLocalIdent;
@@ -55,18 +62,5 @@ const generateUpdateNextConfig =
       return webpackResult;
     },
   });
-
-export type Config = {
-  enabled: boolean;
-};
-const isPluginConfig = (config: Config | NextConfig): config is Config => {
-  return typeof config.enabled === 'boolean';
-};
-const withMinifyClassnames = (arg: Config | NextConfig) => {
-  if (isPluginConfig(arg)) {
-    return generateUpdateNextConfig(arg.enabled);
-  }
-  return generateUpdateNextConfig()(arg);
-};
 
 export default withMinifyClassnames;
