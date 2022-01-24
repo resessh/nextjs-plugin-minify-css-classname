@@ -1,6 +1,6 @@
 {
   "name": "nextjs-plugin-minify-css-classname",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Next.js plugin to minify css classnames.",
   "author": "resessh <info@resessh.net>",
   "license": "MIT",
