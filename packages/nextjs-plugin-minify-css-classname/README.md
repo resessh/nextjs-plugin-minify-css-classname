@@ -39,7 +39,7 @@ $ yarn add -D nextjs-plugin-minify-css-classname
 __next.config.js__
 ```js
 // Automatically enable on production build
-const withMinifyClassname = require('nextjs-plugin-minify-css-classname');
+const withMinifyClassname = require('nextjs-plugin-minify-css-classname')();
 
 module.exports = withMinifyClassname({
   // other configs
