@@ -11,7 +11,6 @@ module.exports = {
     path: path.join(__dirname, './lib'),
     publicPath: '/',
     filename: '[name].js',
-    libraryExport: 'default',
     libraryTarget: 'commonjs2',
   },
 

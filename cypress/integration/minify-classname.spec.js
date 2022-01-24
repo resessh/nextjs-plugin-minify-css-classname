@@ -7,7 +7,7 @@ describe('nextjs-plugin-minify-css-classname', () => {
 
   it('correctly minifies css classnames.', () => {
     cy.get('#test-css').then((elements) => {
-      expect(elements[0].className).to.equal('a');
+      expect(['a', 'b', 'c']).to.include(elements[0].className);
       cy.window().then((win) => {
         const color = win
           .getComputedStyle(elements[0])
@@ -19,7 +19,7 @@ describe('nextjs-plugin-minify-css-classname', () => {
 
   it('correctly minifies scss classnames.', () => {
     cy.get('#test-scss').then((elements) => {
-      expect(elements[0].className).to.equal('b');
+      expect(['a', 'b', 'c']).to.include(elements[0].className);
       cy.window().then((win) => {
         const color = win
           .getComputedStyle(elements[0])
@@ -31,7 +31,7 @@ describe('nextjs-plugin-minify-css-classname', () => {
 
   it('correctly minifies sass classnames.', () => {
     cy.get('#test-sass').then((elements) => {
-      expect(elements[0].className).to.equal('c');
+      expect(['a', 'b', 'c']).to.include(elements[0].className);
       cy.window().then((win) => {
         const color = win
           .getComputedStyle(elements[0])
