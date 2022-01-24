@@ -1,3 +1,17 @@
+## [0.0.4](https://github.com/resessh/nextjs-plugin-minify-css-classname/compare/v0.0.3...v0.0.4) (2022-01-24)
+
+
+### Features
+
+* re-design plugin interfaces ([#20](https://github.com/resessh/nextjs-plugin-minify-css-classname/issues/20)) ([050f80d](https://github.com/resessh/nextjs-plugin-minify-css-classname/commit/050f80d0cec9231d6323154a75a502ab78089e84))
+
+
+### BREAKING CHANGES
+
+* Re-designed plugin interfaces to avoid default export for typings.
+
+
+
 # [0.0.3](https://github.com/resessh/nextjs-plugin-minify-css-classname/compare/v0.0.2...v0.0.3) (2022-01-24)
 
 
