@@ -16,7 +16,7 @@
     "commit": "cz"
   },
   "devDependencies": {
-    "@swc/core": "1.2.136",
+    "@swc/core": "1.2.137",
     "@swc/jest": "0.2.17",
     "@types/jest": "27.4.0",
     "commitizen": "4.2.4",
