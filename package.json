@@ -20,7 +20,7 @@
     "@swc/jest": "0.2.20",
     "@types/jest": "27.4.0",
     "commitizen": "4.2.4",
-    "cypress": "9.5.4",
+    "cypress": "9.7.0",
     "jest": "27.5.1",
     "shipjs": "0.24.4",
     "ts-loader": "9.2.8",
