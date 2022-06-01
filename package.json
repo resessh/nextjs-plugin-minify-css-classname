@@ -18,7 +18,7 @@
   "devDependencies": {
     "@swc/core": "1.2.143",
     "@swc/jest": "0.2.20",
-    "@types/jest": "27.4.0",
+    "@types/jest": "27.5.2",
     "commitizen": "4.2.4",
     "cypress": "9.5.4",
     "jest": "27.5.1",
