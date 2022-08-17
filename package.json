@@ -19,7 +19,7 @@
     "@swc/core": "1.2.222",
     "@swc/jest": "0.2.20",
     "@types/jest": "27.5.2",
-    "commitizen": "4.2.4",
+    "commitizen": "4.2.5",
     "cypress": "9.7.0",
     "jest": "27.5.1",
     "shipjs": "0.24.4",
