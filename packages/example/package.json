@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "@types/react": "18.0.18",
+    "@types/react": "18.0.25",
     "sass": "1.54.7"
   },
   "dependencies": {
