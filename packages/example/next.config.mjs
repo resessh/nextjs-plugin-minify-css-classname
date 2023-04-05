@@ -2,13 +2,12 @@
 /**
  * without config
  */
-const { withMinifyClassnames } = require('nextjs-plugin-minify-css-classname');
+import { withMinifyClassnames } from 'nextjs-plugin-minify-css-classname';
 
 /**
  * @type {import('next').NextConfig}
  */
-module.exports = withMinifyClassnames({
-  cssModules: true,
+const nextConfig = withMinifyClassnames({
   reactStrictMode: true,
   pageExtensions: ['page.tsx'],
 });
@@ -16,15 +15,16 @@ module.exports = withMinifyClassnames({
 /**
  * with config
  */
-// const {
+// import {
 //   withMinifyClassnamesConfig,
-// } = require('nextjs-plugin-minify-css-classname');
+// } from 'nextjs-plugin-minify-css-classname';
 
 // /**
 //  * @type {import('next').NextConfig}
 //  */
-// module.exports = withMinifyClassnamesConfig({ enabled: true })({
-//   cssModules: true,
+// const nextConfig = withMinifyClassnamesConfig({ enabled: true })({
 //   reactStrictMode: true,
 //   pageExtensions: ['page.tsx'],
 // });
+
+export default nextConfig;
