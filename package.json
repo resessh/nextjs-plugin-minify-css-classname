@@ -29,7 +29,7 @@
     "webpack-cli": "4.10.0"
   },
   "dependencies": {
-    "next": "12.3.4"
+    "next": "13.2.4"
   },
   "config": {
     "commitizen": {
