@@ -2,17 +2,30 @@ const classNameCharset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 export class SequentialClassnameGenerator {
   private map = new Map<string, string>();
+  private prefix = '';
 
   constructor(private charset = classNameCharset) {}
+
+  withPrefix(prefix: string) {
+    this.prefix = prefix;
+    return this;
+  }
+
+  getPrefix() {
+    return this.prefix;
+  }
 
   get(key: string): string {
     if (this.map.has(key)) {
       return this.map.get(key)!;
     }
     const encoded = this.encode(this.count);
-    this.map.set(key, encoded);
+    const withPrefix = this.prefix + encoded;
+    const result = withPrefix;
 
-    return encoded;
+    this.map.set(key, result);
+
+    return result;
   }
 
   private get count() {

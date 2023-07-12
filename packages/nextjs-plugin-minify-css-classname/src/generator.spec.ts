@@ -54,4 +54,24 @@ describe('SequentialClassnameGenerator', () => {
     expect(generator.get('1')).toBe('a');
     expect(generator.get('1')).toBe('a');
   });
+
+  it('persists the prefix when prefix is specified.', () => {
+    const prefix = 'prefix-';
+    expect(generator.withPrefix(prefix)).toBe(generator);
+    expect(generator.getPrefix()).toBe(prefix);
+  });
+
+  it('returns the generated output with prefix when prefix is specified.', () => {
+    const prefix = 'prefix-';
+    generator.withPrefix(prefix);
+    expect(generator.get('1')).toBe(`${prefix}a`);
+    expect(generator.get('2')).toBe(`${prefix}b`);
+  });
+
+  it('keeps prefix as part of state.', () => {
+    expect(generator.withPrefix('prefix-1-').get('1')).toBe('prefix-1-a');
+    expect(generator.withPrefix('prefix-2-').get('2')).toBe('prefix-2-b');
+    expect(generator.withPrefix('prefix-2-').get('1')).toBe('prefix-1-a');
+    expect(generator.withPrefix('prefix-1-').get('2')).toBe('prefix-2-b');
+  });
 });

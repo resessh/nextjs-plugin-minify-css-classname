@@ -16,8 +16,13 @@ const getMinifiedLocalIdent = (
   return localIdentGenerator.get(`${relativePath}-${exportName}`);
 };
 
+export type Config = {
+  enabled: boolean;
+  prefix: string;
+};
+
 const generateUpdateNextConfig =
-  (enabled?: boolean) =>
+  (pluginConfig?: Partial<Config>) =>
   (
     originalNextConfig: NextConfig
   ): NextConfig & { webpack: NonNullable<NextConfig['webpack']> } => ({
@@ -27,6 +32,8 @@ const generateUpdateNextConfig =
         typeof originalNextConfig.webpack === 'function'
           ? originalNextConfig.webpack(config, context)
           : config;
+
+      const enabled = pluginConfig?.enabled;
 
       if (enabled === false || (enabled === undefined && context.dev)) {
         return webpackResult;
@@ -56,12 +63,9 @@ const generateUpdateNextConfig =
     },
   });
 
-export type Config = {
-  enabled: boolean;
-};
 export type DecoratedNextConfig = NextConfig & {
   webpack: NonNullable<NextConfig['webpack']>;
 };
 export const withMinifyClassnames = generateUpdateNextConfig();
-export const withMinifyClassnamesConfig = ({ enabled }: Config) =>
-  generateUpdateNextConfig(enabled);
+export const withMinifyClassnamesConfig = (config: Partial<Config>) =>
+  generateUpdateNextConfig(config);
