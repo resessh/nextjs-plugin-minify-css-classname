@@ -16,8 +16,8 @@
     "commit": "cz"
   },
   "devDependencies": {
-    "@swc/core": "1.3.44",
-    "@swc/jest": "0.2.24",
+    "@swc/core": "1.3.102",
+    "@swc/jest": "0.2.29",
     "@types/jest": "29.5.0",
     "commitizen": "4.3.0",
     "cypress": "9.7.0",
