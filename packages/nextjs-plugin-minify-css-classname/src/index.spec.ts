@@ -1,5 +1,5 @@
+import { describe, beforeEach, afterEach, expect, it, vi } from 'vitest';
 import { withMinifyClassnames, withMinifyClassnamesConfig } from '.';
-import type { Config, DecoratedNextConfig } from '.';
 import type { NextConfig } from 'next';
 
 const noop = () => {};
@@ -110,8 +110,12 @@ describe('nextjs-plugin-minify-css-classname', () => {
   });
 
   describe('when plugin enabled', () => {
+    afterEach(() => {
+      vi.restoreAllMocks();
+    });
+
     it('executes defined webpack function', () => {
-      const webpack = jest.fn((webpack) => ({
+      const webpack = vi.fn().mockImplementation((webpack) => ({
         ...webpack,
         mode: 'development',
       }));
